@@ -1,3 +1,4 @@
+#include "histogram/histogram.h"
 #include<iostream>
 #include<vector>
 
@@ -12,19 +13,7 @@ vector<double> input_numbers(size_t number_count)
     return result;
 }
 
-//оиск минимума и максимума
-void find_minmax(vector<double> numbers, double& min, double& max)
-{
-    min=numbers[0];
-    max=numbers[0];
-    for(double number : numbers)
-    {
-        if(number<min)
-            {min=number;}
-        if(number>max)
-            {max=number;}
-    }
-}
+
 //расчет количества чисел в столбцах
 vector<size_t> make_histogram(vector<double> numbers, size_t bin_count)
 {
